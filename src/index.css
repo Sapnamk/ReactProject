@@ -1,0 +1,306 @@
+/* ============================
+   DAYCRAFT PREMIUM CSS
+=============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(-45deg,#6a11cb,#2575fc,#00c9ff,#92fe9d);
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
+    padding:40px 15px;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* Heading */
+
+h1{
+    text-align:center;
+    font-size:52px;
+    margin-bottom:10px;
+    color:white;
+    letter-spacing:2px;
+    text-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+.subtitle{
+    text-align:center;
+    color:#ffffff;
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+/* Form */
+
+.task-form{
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(18px);
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+    border:1px solid rgba(255,255,255,.2);
+    margin-bottom:35px;
+}
+
+.form-row{
+    display:flex;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+input,
+select{
+
+    width:100%;
+    padding:16px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    background:white;
+    font-size:17px;
+    transition:.4s;
+}
+
+input:focus,
+select:focus{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(37,117,252,.35);
+}
+
+/* Buttons */
+
+button{
+    cursor:pointer;
+    border:none;
+    transition:.35s;
+    font-weight:600;
+}
+
+.add-btn{
+
+    padding:16px 30px;
+    border-radius:15px;
+    color:white;
+    font-size:17px;
+
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+}
+
+.add-btn:hover{
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 15px 25px rgba(37,117,252,.45);
+}
+
+/* Task Card */
+
+.task-card{
+
+    background:rgba(255,255,255,.92);
+    border-radius:20px;
+    padding:20px 25px;
+    margin-bottom:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:.35s;
+    border-left:8px solid #2575fc;
+    box-shadow:0 15px 25px rgba(0,0,0,.12);
+}
+
+.task-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 35px rgba(0,0,0,.18);
+}
+
+.task-title{
+
+    font-size:22px;
+    font-weight:bold;
+    color:#222;
+}
+
+.task-info{
+
+    color:#666;
+    margin-top:5px;
+}
+
+/* Complete */
+
+.complete-btn{
+
+    background:linear-gradient(135deg,#00c853,#69f0ae);
+    color:white;
+    padding:12px 24px;
+    border-radius:12px;
+    margin-right:10px;
+}
+
+.complete-btn:hover{
+    transform:scale(1.08);
+}
+
+/* Delete */
+
+.delete-btn{
+
+    background:linear-gradient(135deg,#ff416c,#ff4b2b);
+    color:white;
+    padding:12px 24px;
+    border-radius:12px;
+}
+
+.delete-btn:hover{
+    transform:scale(1.08);
+}
+
+/* Progress */
+
+.progress-section{
+
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    padding:20px;
+    border-radius:20px;
+    margin-top:25px;
+}
+
+.progress-text{
+    color:white;
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.progress-bar{
+
+    height:16px;
+    background:#ddd;
+    border-radius:50px;
+    overflow:hidden;
+}
+
+.progress{
+
+    height:100%;
+    width:40%;
+    background:linear-gradient(90deg,#00f260,#0575e6);
+    border-radius:50px;
+    animation:progress 2s ease;
+}
+
+@keyframes progress{
+
+    from{
+        width:0;
+    }
+}
+
+/* Clear Button */
+
+.clear-btn{
+
+    margin-top:35px;
+    padding:16px 35px;
+    border-radius:15px;
+    color:white;
+    font-size:17px;
+
+    background:linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+.clear-btn:hover{
+
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(221,36,118,.4);
+}
+
+/* Completed Task */
+
+.completed{
+
+    text-decoration:line-through;
+    opacity:.6;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.form-row{
+
+    flex-direction:column;
+}
+
+.task-card{
+
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+}
+
+.task-card div:last-child{
+
+    width:100%;
+    display:flex;
+    gap:10px;
+}
+
+.complete-btn,
+.delete-btn{
+
+    width:100%;
+}
+
+h1{
+
+    font-size:40px;
+}
+
+}
+
+@media(max-width:600px){
+
+body{
+
+    padding:20px 10px;
+}
+
+.task-form{
+
+    padding:20px;
+}
+
+h1{
+
+    font-size:34px;
+}
+
+input,
+select{
+
+    font-size:15px;
+}
+
+.add-btn,
+.clear-btn{
+
+    width:100%;
+}
+
+}
